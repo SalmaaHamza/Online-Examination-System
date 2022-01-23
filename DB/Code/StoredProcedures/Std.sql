@@ -21,7 +21,7 @@ Go
 	-- 4000 In Case of Not Found Key
 -- =============================================
 
-create Proc spGetByIdStudent @stId int
+create Proc spGetStudentById @stId int
 as 
 	BEGIN TRY  
 			select * from Student

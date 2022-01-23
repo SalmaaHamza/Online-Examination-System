@@ -21,7 +21,7 @@ Go
 	-- 4000 In Case of Not Found Std Key
 -- =============================================
 
-create Proc spGetByIdStudentGradesInAllCrs @stId int
+create Proc spGetStdGradesInAllCrsById @stId int
 as 
 	BEGIN TRY  
 			select * from Stud_Course
@@ -37,7 +37,7 @@ GO
 -- =============================================
 -- Author:      Salma Hamza
 -- Create date: 1-22-2022
--- Description: get Students grade In Specific Course By Id
+-- Description: get Students' grades In Specific Course By Id
 -- Parameters 
 	-- @crsId: Stduent Id  Not Null 
 -- return 
@@ -45,7 +45,7 @@ GO
 	-- 4000 In Case of Not Found Crs Key
 -- =============================================
 
-create Proc spGetByIdStudentsGradesInSpecificCrs @crsId int
+create Proc spGetStdsGradesInCrsById @crsId int
 as 
 	BEGIN TRY  
 			select * from Stud_Course
@@ -61,7 +61,7 @@ GO
 -- =============================================
 -- Author:      Salma Hamza
 -- Create date: 1-22-2022
--- Description: get Students grade In Specific Course By Id
+-- Description: get Students grades In Specific Course By Id
 -- Parameters 
 	-- @crsId: Stduent Id  Not Null 
 -- return 
@@ -69,7 +69,7 @@ GO
 	-- 4000 In Case of Not Found (Crs Key or Student Key)
 -- =============================================
 
-create Proc spGetByIdStudentGradeInCrs @stdId int, @crsId int
+create Proc spGetStdGradeInCrsById @stdId int, @crsId int
 as 
 	BEGIN TRY  
 			select * from Stud_Course
@@ -85,7 +85,7 @@ GO
 -- =============================================
 -- Author:      Salma Hamza
 -- Create date:  1-22-2022
--- Description: Insert Grade of Student in specific Coursr
+-- Description: Insert Grade of Student in specific Course
 -- Parameters 
 	-- @stId: Stduent Id Not Null
 	-- @crsId : Course Id Not Null
@@ -152,7 +152,7 @@ GO
 	-- 1000 In Case of Success
 -- =============================================
 
-create proc spDeleteStudent @stId int ,@crsId int
+create proc spDeleteGradeOfStdInCrs @stId int, @crsId int
 as
 	if not Exists (select * from Stud_Course where St_Id = @stId and Crs_Id = @crsId)
 		return 4000
