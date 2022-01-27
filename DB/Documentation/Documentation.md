@@ -100,6 +100,21 @@
 5. spDeleteStdAnswerOfQuesInExam @stId int, @examNo int , @quesNo int 
     **Remove the Question's Answer of Student in specific Exam**
 
+## 7. Crs wiz Instructor
+1. spGetInsEvaluationInAllCrs 
+2. spGetByIdInsEvaluationsInAllCrs @insId int **get instructor evaluation In all Courses By Id**
+3. spGetByIdInsEvaluationsInCrs @crsId int **get instructors' Evaluation In Specific Course By crsId**
+4. spGetByIdInsEvaluationInCrs @insId int, @crsId int **get instructor evaluation In Specific Course By Id**
+5. spAddEvaluationOfInsInCrs @insId int, @crsId int , @evaluation nvarchar(50)
+6. spUpdateEvaluationOfInsInCrs @insId int, @crsId int ,  @evaluation nvarchar(50)
+7. spDeleteEvaluationOfInsInCrs @insId int, @crsId int
+
+## 8.Instructor
+1. spGetInstructors
+2. spGetByIdInstructor @InsId int
+3. spAddInstructor @InsId int, @InsName nvarchar(50) , @InsDegree nvarchar(50) , @salary int, @deptId int
+4. spUpdateInstructor @InsId int, @InsName nvarchar(50) , @InsDegree nvarchar(50) , @salary int, @deptId int
+5. spDeleteInstructor @InsId int
 
 ---
 ## Functions
