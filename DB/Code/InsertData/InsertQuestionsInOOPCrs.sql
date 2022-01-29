@@ -97,7 +97,7 @@ an instance of suchatype.',1,'TF',1
 Go
 spAddQuestionChoices 15,1,'True'
 GO
-spAddQuestionChoices 16,2,'False'
+spAddQuestionChoices 15,2,'False'
 
 GO
 --
