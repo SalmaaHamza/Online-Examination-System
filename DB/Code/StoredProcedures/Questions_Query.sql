@@ -141,7 +141,7 @@ as
 Go
 ---- =============================================
 ---- Author:      Nourhan AYman
----- Create date: 1-22-2022
+---- Create date: 29-1-2022
 ---- Type:Stored Procedure
 ---- Parameters 
 --	-- @que_no: Question Number  Not Null
@@ -151,7 +151,7 @@ Go
 --	-- 1000 In Case of Success
 --	-- 4000 In Case of Not Found (Question Number)
 ---- =============================================
-create proc spUpdateQuestionModelAnswer  @que_no int ,@newModelAn nvarchar(50)
+alter proc spUpdateQuestionModelAnswer  @que_no int ,@newModelAn int
 as
     BEGIN TRY 
 		update Questions_view set ModelAnswer=@newModelAn where Q_Number= @que_no
@@ -166,7 +166,7 @@ Go
 
 ---- =============================================
 ---- Author:      Nourhan AYman
----- Create date: 1-22-2022
+---- Create date: 29-1-2022
 ---- Type: Stored Procedure
 ---- Parameters 
 --	-- @qNo: Question Number  Not Null
@@ -180,7 +180,7 @@ Go
 	-- 3000 In Case of Not Found Foreign Key
 	-- 1000 In Case of Success
 ---- =============================================
-create proc spAddQuestion  @qNo int,@qDesc nvarchar(50),@modelAnswer nchar(10),@type nchar(10),@courseID int
+alter proc spAddQuestion  @qNo int,@qDesc nvarchar(50),@modelAnswer int,@type nchar(10),@courseID int
 as
 	if Exists (select * from Questions_view where Q_Number = @qNo and Course_ID = @courseID)
 		return 2000

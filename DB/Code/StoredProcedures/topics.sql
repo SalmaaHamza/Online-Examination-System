@@ -6,10 +6,9 @@
 -- Description:view all the data of The Topics 
 --Coulmns:Topic_ID, Topic_Name
 -- =============================================
-CREATE VIEW Topics_View AS
-SELECT Top_Id  as Topic_ID, Top_Name as Topic_Name
+alter VIEW Topics_View AS
+SELECT Top_Id  as Topic_ID, Top_Name as Topic_Name, Crs_Id as Course_ID
 FROM Topic
-
 -- =================================Stored Procedure=====================================================--
 --==================================Select===========================================================--
 -- =============================================
@@ -72,11 +71,13 @@ as
 	   return 4000 
 	END CATCH 
 Go
+
+
 --======================================Insert===========================================================--
 
 ---- =============================================
 ---- Author:      Nourhan AYman
----- Create date: 1-27-2022
+---- Create date: 1-29-2022
 ---- Type:Stored Procedure
 ---- Parameters 
 --	-- @T_no: Topic Number  Not Null
@@ -84,17 +85,20 @@ Go
 ---- Description:Insert The Topics
 ---- return 
 --	-- 1000 In Case of Success
+	-- 3000 In Case of Not Found Foreign Key
 --	-- 4000 In Case of somthing wrong happen in data entered
+--
 ---- =============================================
-create proc spAddTopic   @T_no int,@Topic_name nvarchar(50)
+alter proc spAddTopic  @topicID int,@topicName nvarchar(50),@crsID int
 as
-    BEGIN TRY 
-		insert into Topics_View values(@T_no,@Topic_name)
+	if Exists (select * from Topics_View where  Topic_ID = @topicID and Course_ID = @crsID)
+		return 2000
+
+	if not Exists(select * from Course where Crs_Id = @crsID) 
+		return 3000
+
+    insert into Topics_View values(@topicID,@topicName,@crsID)
 		return 1000
-	END TRY
-	BEGIN CATCH  
-	   return 4000 
-	END CATCH 
 Go
 
 

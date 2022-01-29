@@ -33,7 +33,7 @@ GO
 
 -- =============================================
 -- Author:      Mohamed Ayman
--- Create date:  1-22-2022
+-- Create date:  1-29-2022
 -- Description: Insert New Course
 -- Parameters 
 	-- @crsId:			Course Id Not Null
@@ -46,21 +46,18 @@ GO
 	-- 3000 In Case of Not Found Foreign Key
 	-- 1000 In Case of Success
 -- =============================================
-create proc spAddCourse @crsId int ,@crsName nvarchar(50) , @crsDuration nvarchar(50) , @topId int
+alter proc spAddCourse @crsId int ,@crsName nvarchar(50) , @crsDuration int 
 AS 
-	if Exists (	select *from Course	where Crs_Id = @crsId)
+	if Exists (	select * from Course where Crs_Id = @crsId)
 		return 2000
 
-	if not Exists (	select * from Topic	where Top_Id = @topId)
-		return 3000
-
-	insert into Course values(@crsId , @crsName,@crsDuration,@topId )
+	insert into Course values(@crsId , @crsName,@crsDuration )
 		return 1000
 GO
 
 -- =============================================
 -- Author:      Mohamed Ayman
--- Create date: 22-1-2022
+-- Create date: 29-1-2022
 -- Description: Update Course Data
 -- Parameters 
 	-- @crsId:			Course Id Not Null
@@ -70,25 +67,22 @@ GO
 
 -- return 
 	-- 4000 In Case of Not Found ID
-	-- 3000 In Case of Not Found Foreign Key
+
 	-- 1000 In Case of Success
 -- =============================================
 
-create proc spUpdateCourse @crsId int , @crsName nvarchar(50) ,@crsDuration nvarchar(50),@topId int
+alter proc spUpdateCourse @crsId int , @crsName nvarchar(50) ,@crsDuration int
 AS
 	if NOT EXISTS(select * from Course	where Crs_Id = @crsId)
 		return 4000
 
-	if NOT EXISTS(select * from Topic where Top_Id = @topId)
-		return 3000
-
-	update Course set Crs_Name = @crsName , Crs_Duration = @crsDuration ,Top_Id=@topId 	where Crs_Id = @crsId
+	update Course set Crs_Name = @crsName , Crs_Duration = @crsDuration where Crs_Id = @crsId
 		return 1000
 GO
 
 -- =============================================
 -- Author:      Mohamed Ayman
--- Create date: 22-1-2022
+-- Create date: 29-1-2022
 -- Description: Remove Course From DB
 -- Parameters 
 	-- @crsId: Course Id Not Null
@@ -97,11 +91,16 @@ GO
 	-- 4000 In Case of Not Found ID
 	-- 1000 In Case of Success
 -- =============================================
-create proc spDeleteCourse @crsId int
+alter proc spDeleteCourse @crsId int
 AS 
-	if NOT EXISTS(select *	from Course	 where Crs_Id = @crsId )
-	return 4000
 
-	delete from Course	where Crs_Id = @crsId
-	return 1000
+	Begin Try
+		delete from Course	where Crs_Id = @crsId
+		update Topic set Crs_Id = Null where Crs_Id = @crsId
+		return 1000
+	End Try
+
+	Begin Catch
+		return 4000
+	End Catch
 GO
