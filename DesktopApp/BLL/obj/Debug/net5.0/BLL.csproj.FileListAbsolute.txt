@@ -1,0 +1,16 @@
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\bin\Debug\net5.0\BLL.deps.json
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\bin\Debug\net5.0\BLL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\bin\Debug\net5.0\ref\BLL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\bin\Debug\net5.0\BLL.pdb
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\bin\Debug\net5.0\DAL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\bin\Debug\net5.0\DAL.pdb
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\BLL.csproj.AssemblyReference.cache
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\BLL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\ref\BLL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\obj\Debug\net5.0\BLL.pdb
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\BLL\bin\Debug\net5.0\DAL.dll.config

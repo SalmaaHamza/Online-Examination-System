@@ -1,0 +1,13 @@
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\bin\Debug\net5.0\DAL.deps.json
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\bin\Debug\net5.0\DAL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\bin\Debug\net5.0\ref\DAL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\bin\Debug\net5.0\DAL.pdb
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\obj\Debug\net5.0\DAL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\obj\Debug\net5.0\ref\DAL.dll
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\obj\Debug\net5.0\DAL.pdb
+D:\ITI_Data\BigProjects\DB\Online-Examination-System\DesktopApp\DAL\bin\Debug\net5.0\DAL.dll.config
